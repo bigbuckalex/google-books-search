@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import AppNavbar from './components/AppNavbar';
+import {Route} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import AppSearchbar from './components/AppSearchbar';
+import AppSearchList from './components/AppSearchList';
+import AppSavedList from './components/AppSavedList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppNavbar/>
+      <Route exact path="/" component={AppSearchbar}></Route>
+      <Route exact path="/" component={AppSearchList}></Route>
+      <Route exact path="/saved" component={AppSavedList}></Route>
     </div>
   );
 }
