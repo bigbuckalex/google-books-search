@@ -1,24 +1,18 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {
     Button,
     Label,
     Input
 } from 'reactstrap';
 
-class AppSearchbar extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return(
-            <div>
-                <Label>Search for books</Label>
-                <Input/>
-                <Button color="success">Search</Button>
-            </div>
-        );
-    }
+const AppSearchbar = ({query, handleInput, handleSubmit}) => {
+    return(
+        <div>
+            <Label>Search for books</Label>
+            <Input onChange={handleInput} value={query}/>
+            <Button onClink={handleSubmit} color="success">Search</Button>
+        </div>
+    );
 }
 
 export default AppSearchbar;

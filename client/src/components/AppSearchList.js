@@ -1,12 +1,17 @@
 import React, {Component} from 'react';
+import AppSearchBar from './AppSearchbar';
 
 class AppSearchList extends Component {
-    constructor(props) {
-        super(props);
+    state = {
+        books: []
     }
+
     render() {
         return(
-            <h1>searchlist</h1>
+            <div>
+                <AppSearchBar/>
+                
+            </div>
         );
     }
 }

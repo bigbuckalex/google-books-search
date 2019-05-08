@@ -1,8 +1,8 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 
 //Book model
-const Book = require("../../models/Books");
+const Book = require('../../models/Books');
 
 //GET /api/books - Get saved books
 router.get("/", (req, res) => {

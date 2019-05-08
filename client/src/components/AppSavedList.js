@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 class AppSavedList extends Component {
     constructor(props) {
         super(props);
