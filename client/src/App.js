@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import AppNavbar from './components/AppNavbar';
 import { Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
